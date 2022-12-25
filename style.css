@@ -35,6 +35,11 @@ header {
   padding: 40px 20px;
 }
 
+.menu_link:hover {
+  background-color: #3A68B8;
+  border-radius: 10px;
+}
+
 .title3 {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -263,4 +268,6 @@ header {
 .fa,
 .fas {
   color: #FFFFFF;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
