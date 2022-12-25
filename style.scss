@@ -5,18 +5,54 @@
     box-sizing: border-box;
 }
 
-$button-color: rgb(240, 215, 219);
-$color: rgb(34, 10, 34);
+@mixin txt ($lh, $fs, $fw) {
+    line-height: $lh;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $txtcolor;
+    font-family: "Open Sans", sans-serif;
+}
+
+@import "vars";
+@import "header";
+
+@mixin brd ($brad) {
+    border-radius: $brad;
+    -webkit-border-radius: $brad;
+    -moz-border-radius: $brad;
+}
+
+.footer_all {
+    width: 260px;
+}
+
+.item {
+    @include brd(30px);
+}
+
+.margin {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 40px 20px;
+}
+
+.main_heading {
+    @include txt(130%, 55px, 800);
+}
+
+.menu_link:hover {
+    background-color: $button-color;
+    border-radius: 10px;
+}
 
 body {
     background-color: #08101e;
 }
 
-header {
-    background-color: #0a121f;
-    height: 100px;
-    margin-bottom: 160px;
-}
 
 .header_menu {
     display: flex;
@@ -29,13 +65,7 @@ header {
 }
 
 .menu_link {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 40px 20px;
+    @extend .margin;
 }
 
 .title3 {
@@ -70,6 +100,10 @@ header {
     margin-bottom: 50px;
 }
 
+.index_button:hover {
+    background: rgb(63, 63, 192);
+}
+
 .index_button {
     background: $button-color;
     border-radius: 5px;
@@ -81,14 +115,16 @@ header {
     font-size: 20px;
     line-height: 27px;
     color: $color;
-}
+    &_red:
+        background-color: red;
 
-.index_button:hover {
-    background: rgb(63, 63, 192);
+    &_hover: hover {
+        background-color: green;
+    }
 }
 
 .buttons_box {
-    margin-top: 50px;
+    &__index_button margin-top: 50px;
 }
 
 .logo_bar {
@@ -234,15 +270,15 @@ header {
 }
 
 .footer_left {
-    width: 260px;
+    @extend .footer_all;
 }
 
 .footer_center {
-    width: 260px;
+    @extend .footer_all;
 }
 
 .footer_right {
-    width: 260px;
+    @extend .footer_all;
 }
 
 .footer {
