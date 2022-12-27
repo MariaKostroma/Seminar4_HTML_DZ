@@ -5,6 +5,48 @@
   box-sizing: border-box;
 }
 
+@keyframes myAnim {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  10% {
+    margin-left: 200px;
+  }
+
+  20% {
+    transform: scale(2);
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.left_content {
+  animation: myAnim 3s ease 2s infinite normal forwards;
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.content_right {
+  animation: scale-up-center 5s infinite both;
+}
+
 body {
   background-color: #08101e;
 }
@@ -33,11 +75,36 @@ header {
   font-weight: 600;
   font-size: 16px;
   padding: 40px 20px;
+  transition: all 1s;
 }
 
 .menu_link:hover {
   background-color: #3A68B8;
   border-radius: 10px;
+}
+
+.header_menu:hover .menu_link {
+  margin-top: 150px;
+}
+
+.header_menu:hover .link1 {
+  transition: all 3s ease-out;
+}
+
+.header_menu:hover .link2 {
+  transition: all 3s ease-in-out;
+}
+
+.header_menu:hover .link3 {
+  transition: all 3s ease-in;
+}
+
+.header_menu:hover .link4 {
+  transition: all 3s linear;
+}
+
+.header_menu:hover .link5 {
+  transition: all 3s cubic-bezier(0, 1.55, .83, -0.18);
 }
 
 .title3 {
@@ -83,17 +150,31 @@ header {
   font-size: 20px;
   line-height: 27px;
   color: rgb(34, 10, 34);
+  transition: all 2s;
 }
 
 .index_button:hover {
   background: rgb(63, 63, 192);
+  color: #FFFFFF;
+}
+
+.button1:hover {
+  transform: translateX(50px) scale(1.5);
+}
+
+.button2:hover {
+  transform: skew(35deg, 20deg);
+}
+
+.button3:hover {
+  transform: rotate(360deg);
 }
 
 .buttons_box {
   margin-top: 50px;
 }
 
-.logo_bar {
+.button .logo_bar {
   margin-top: 200px;
 }
 
