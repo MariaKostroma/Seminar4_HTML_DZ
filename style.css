@@ -64,7 +64,7 @@ header {
 }
 
 .container {
-  width: 100%;
+  width: 1146px;
   margin: 0 auto;
 }
 
@@ -175,7 +175,7 @@ header {
   margin-top: 50px;
 }
 
-.button .logo_bar {
+.logo_bar {
   margin-top: 200px;
 }
 
@@ -186,6 +186,7 @@ header {
 
 .content_left {
   width: 100%;
+  margin-right: 2%;
 }
 
 .content_information {
@@ -364,26 +365,17 @@ header {
     width: 100%;
   }
 
-  .item-1 {
-    grid-column: span 6;
-
-  }
-
-  .item-2 {
-    grid-column: span 6;
-  }
-
-  .item-3 {
-    grid-column: span 6;
+  .many_blocks {
+    display: grid;
+    grid-template-rows: repeat(3, 350px);
+    grid-template-columns: repeat(1, 350px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-bottom: 243px;
   }
 
   .item-4, .item-5, .item-6 {
     display: none;
-  }
-
-  .many_blocks {
-    padding-right: 25%;
-    padding-left: 25%;
   }
 
   .flex_box {
